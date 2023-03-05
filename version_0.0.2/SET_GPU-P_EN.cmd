@@ -50,8 +50,8 @@ $VMall = Get-VM
 $VMalls = $VMall.Name | Out-String -Stream
 # conditional branch
 if ($VMalls.Contains("$0VMName"))
-  {Write-Host "Proceeding with the process"} `
-Else `
+  {Write-Host "Proceeding with the process"}
+Else
   {# Input value does not match
    Write-Host "Incorrect characters entered. Processing will be aborted."
    Write-Host "Press any key to continue..."
@@ -159,9 +159,8 @@ If($Count -ge 2) {
   # Display choices on screen
    $Result = $Host.UI.PromptForChoice("'Confirmation'","--Please select a number and enter it--`r`n`b",$Sub,$Num)
   # Execute commands according to selection
-   If($Result -ne $Num) {
-      . ([Scriptblock]::Create("switch ($Result) $Options"))
-   }
+   If($Result -ne $Num)
+     {. ([Scriptblock]::Create("switch ($Result) $Options"))}
 }
 
 # Execute when one GPU or leave it to the GPU
