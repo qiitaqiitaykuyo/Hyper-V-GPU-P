@@ -40,7 +40,7 @@ echo.
 set /p "number=...version...: "
 echo.
 echo.
-echo 　コピーするフォルダー名を入力してください
+echo 　コピーするフォルダー名を入力してください（"NVWMI" が含まれるディレクトリを入力）
 echo 　例）...nv_dispi～.inf_amd64_～...: nv_dispsig.inf_amd64_3785fc0bbhsid471
 echo.
 set /p "Folder=...nv_dispi～.inf_amd64_～...: "
