@@ -1,0 +1,2 @@
+# `.gitattributes` ＃＃＃: `.cmd` ファイルを PowerShell に分類する
+*.cmd linguist-language=PowerShell
