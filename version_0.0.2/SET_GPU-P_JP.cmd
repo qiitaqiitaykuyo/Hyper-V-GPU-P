@@ -50,8 +50,8 @@ $VMall = Get-VM
 $VMalls = $VMall.Name | Out-String -Stream
 # 条件分岐
 if ($VMalls.Contains("$0VMName"))
-  {Write-Host プロセスを進めます} `
-Else `
+  {Write-Host プロセスを進めます}
+Else
   {# 入力された値が 不適合
    Write-Host 入力された文字が不適切です。処理を中断します。
    Write-Host "続行するには何かキーを押してください..."
@@ -159,9 +159,8 @@ If($Count -ge 2) {
   # 選択肢を画面表示
    $Result = $Host.UI.PromptForChoice("【確認】","--番号を選び、入力してください--`r`n　",$Sub,$Num)
   # 選択に応じたコマンドを実行
-   If($Result -ne $Num) {
-      . ([Scriptblock]::Create("switch ($Result) $Options"))
-   }
+   If($Result -ne $Num)
+     {. ([Scriptblock]::Create("switch ($Result) $Options"))}
 }
 
 # GPU が1つ 又は おまかせ にした場合に実行する
