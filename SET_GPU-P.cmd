@@ -1,4 +1,3 @@
-```cmd
 @echo off && goto PreCheck
 <# コマンドプロンプト----------------------------------
   :PreCheck
@@ -25,8 +24,6 @@
      set "Dir=%~1"
      powershell -NoProfile -ExecutionPolicy Unrestricted "$s=[scriptblock]::create((gc \""%~f0"\"|?{$_.readcount -gt 1})-join\"`n\");&$s" "'%Dir%'" &exit /b
 -------------------------------------------------------#>
-```
-```PowerShell
   Param([string] $SptDirPATH)
   write-host "Script Start......`($SptDirPATH`)"
 ####################################
@@ -340,4 +337,3 @@ Write-Host "すべてのプロセスは終了しました"
   Write-Host "画面を閉じるには何かキーを押してください..."
   $host.UI.RawUI.ReadKey() | Out-Null
   EXIT
-```
